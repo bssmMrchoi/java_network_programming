@@ -1,0 +1,19 @@
+package com.company.example.ch01_stream;
+
+import java.io.IOException;
+/*
+1024만큼 크기를 설정 했으나 실제로는 512바이트만 서버로 도착했고 나머지는 전송 중인 상태가 발생할 수 있다
+ */
+public class InputStream2 {
+    public static void main(String[] args) {
+        byte[] input = new byte[1024];
+        try {
+            int bytesRead = System.in.read(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (int i=0; i<input.length; i++) {
+            System.out.print((char)input[i]);
+        }
+    }
+}
