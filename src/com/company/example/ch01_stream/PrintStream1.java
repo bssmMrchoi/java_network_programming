@@ -5,10 +5,11 @@ import java.io.OutputStream;
 
 /*
 아스키코드 33부터 126 사이의 값을 출력
-33부터 105까지
-34부터 106까지
+33부터 105까지 72개
+34부터 106까지 72개
 등등
 1개의 문자를 OutputStream 통해 출력
+ => 한 번에 한 바이트씩 축력하는 방식은 매우 비효율
  */
 public class PrintStream1 {
     public static void generateCharacters(OutputStream out) throws IOException {
