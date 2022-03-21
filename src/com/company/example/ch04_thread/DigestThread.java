@@ -13,7 +13,7 @@ import java.security.NoSuchAlgorithmException;
         md5 => 16*32개
         sha-256 => 16*64개
  */
-public class DigestThread extends Thread{
+public class DigestThread implements Runnable{
     private String pwd;
 
     public DigestThread(String pwd) {
@@ -42,7 +42,7 @@ public class DigestThread extends Thread{
 
     public static void main(String[] args) {
         for (int i=0; i<10; i++) {
-            Thread t = new DigestThread("password");
+            Thread t = new Thread(new DigestThread("password"));
             t.start();
         }
     }
