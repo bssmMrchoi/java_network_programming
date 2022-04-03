@@ -1,0 +1,3 @@
+DatagramPacket 클래스와 DatagramSocket 클래스를 사용하여 UDP 통신을 하는 간단한 프로그램
+UDPClientExam : 사용자에게 메시지를 입력받아서 서버로 메시지를 전달
+UDPServerExam : 클라이언트가 보낸 메시지를 화면에 그대로 출력하는 프로그램
